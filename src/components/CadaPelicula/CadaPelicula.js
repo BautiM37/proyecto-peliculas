@@ -1,11 +1,14 @@
 import React, {Component} from "react";
-import './cadaPeliculaPopular.css';
+import './cadaPelicula.css';
 
-class CadaPeliculaPopular extends Component{
+class CadaPelicula extends Component{
     constructor(){
         super()
         this.state={
             
         }
+    }
+    render(){
+        
     }
 }
