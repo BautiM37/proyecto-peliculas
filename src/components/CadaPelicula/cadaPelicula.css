@@ -1,0 +1,20 @@
+.tarjeta-pelicula{
+    width: 19vw;
+    background-color: black;
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+
+.imagen-pelicula{
+    width: 18vw;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.descripcion{
+    font-size: 16px;
+}
+
+.titulo{
+    font-size: 22px;
+}

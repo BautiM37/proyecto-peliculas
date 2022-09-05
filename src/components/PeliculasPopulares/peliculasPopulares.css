@@ -1,0 +1,6 @@
+.tarjetas-varias{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    justify-content: space-around;
+    margin-left: 0.7vw;
+}

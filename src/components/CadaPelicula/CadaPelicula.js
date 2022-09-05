@@ -11,10 +11,10 @@ class CadaPelicula extends Component{
 
     render(){
         return(
-             <article className='character-card'>
-                <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" />
-                <h2>{this.props.pelicula.title}</h2>
-                <p>{this.props.pelicula.overview}</p>
+             <article className='tarjeta-pelicula'>
+                <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula'/>
+                <h2 className='titulo'>{this.props.pelicula.title}</h2>
+                <p className='descripcion'>{this.props.pelicula.overview}</p>
                 <p>Ver más</p> 
             </article>
 
