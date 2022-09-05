@@ -3,6 +3,7 @@
     background-color: black;
     border: 2px solid blue;
     border-radius: 20px;
+    margin-bottom: 12px;
 }
 
 .imagen-pelicula{
@@ -17,4 +18,12 @@
 
 .titulo{
     font-size: 22px;
+}
+
+.esconder{
+    display: none;
+}
+
+.mostrar{
+    display: block;
 }

@@ -5,7 +5,25 @@ class CadaPelicula extends Component{
     constructor(props){
         super(props)
         this.state={
-           
+           verMas: false,
+           claseVerMas: 'esconder',
+           textoVerMas: 'Ver Más'
+        }
+    }
+
+    verMasVerMenos(){
+        if (!this.state.verMas) {
+            this.setState({
+                textoVerMas: "Ver Menos",
+                verMas: true,
+                claseVerMas: 'mostrar'
+            })
+        } else {
+            this.setState({
+                textoVerMas: 'Ver Más',
+                verMas: false,
+                claseVerMas: 'esconder'
+            })
         }
     }
 
@@ -14,8 +32,10 @@ class CadaPelicula extends Component{
              <article className='tarjeta-pelicula'>
                 <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula'/>
                 <h2 className='titulo'>{this.props.pelicula.title}</h2>
-                <p className='descripcion'>{this.props.pelicula.overview}</p>
-                <p>Ver más</p> 
+                <button className='boton-ver-mas' onClick={() => this.verMasVerMenos()}>{this.state.textoVerMas}</button>
+                <div className={this.state.claseVerMas}>
+                    <p className='descripcion'>{this.props.pelicula.overview}</p>
+                </div>
             </article>
 
         )

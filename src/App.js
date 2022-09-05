@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header/>
-        <h2>Peliculas Populares</h2>
+        <h2>Películas Populares</h2>
         <PeliculasPopulares/>
-        <h2>Peliculas en Cartel</h2>
+        <h2>Películas en Cartelera</h2>
         <PeliculasCartel/>
       </header>
     </div>

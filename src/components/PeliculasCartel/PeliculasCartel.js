@@ -25,7 +25,7 @@ class PeliculasCartel extends Component{
     render(){
         return(
             <div>
-                <section>
+                <section className="tarjetas-varias">
                     {
                         this.state.peliculas.map((unaPelicula, idx) => <CadaPelicula key={unaPelicula.title+idx}
                         pelicula={unaPelicula}/>)
