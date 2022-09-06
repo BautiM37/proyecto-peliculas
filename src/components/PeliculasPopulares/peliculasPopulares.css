@@ -3,3 +3,8 @@
     grid-template-columns: 2vw 14vw 14vw 14vw 14vw 14vw 14vw 2vw;
     justify-content: space-around;
 }
+
+.flechas{
+    position: relative;
+    top: 15vh;
+}

@@ -7,7 +7,8 @@ class CadaPelicula extends Component{
         this.state={
            verMas: false,
            claseVerMas: 'esconder',
-           textoVerMas: 'Ver Más'
+           textoVerMas: 'Ver Más',
+           infoHover: 'hide'
         }
     }
 

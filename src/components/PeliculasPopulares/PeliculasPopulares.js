@@ -42,13 +42,11 @@ class PeliculasPopulares extends Component {
     render() {
         let masPeliculas = this.state.peliculas.slice((this.state.cantidadMostrados - 6), this.state.cantidadMostrados).map((unaPelicula, idx) => <CadaPelicula key={unaPelicula.title + idx} pelicula={unaPelicula} />)
 
-        let menosPeliculas = this.state.peliculas
-
         return (
             <section className='contenedor-peliculas'>
-                <button onClick={() => this.cargarMenos()}>Cargar Menos</button>
+                <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                 {masPeliculas}
-                <button onClick={() => this.cargarMas()}>Cargar Más</button>
+                <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>
             </section>
         )
     }
