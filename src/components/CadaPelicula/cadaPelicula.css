@@ -1,5 +1,5 @@
 .tarjeta-pelicula{
-    width: 19vw;
+    width: 14vw;
     background-color: black;
     border: 2px solid blue;
     border-radius: 20px;
@@ -7,7 +7,7 @@
 }
 
 .imagen-pelicula{
-    width: 18vw;
+    width: 13vw;
     margin-top: 15px;
     border-radius: 10px;
 }

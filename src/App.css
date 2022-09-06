@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 7vw 90vw;
+  justify-content: space-between;
 }
 
 .App-logo {

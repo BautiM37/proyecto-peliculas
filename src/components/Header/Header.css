@@ -1,10 +1,52 @@
-.hidden{
-    display: none;
-}
-.show{
-    display: block;
-}
-.orientButton{
-    cursor: pointer;
+.menu-principal-false{
+    background-color: rgba(77, 68, 247, 0.3);
+    height: 100vh;
 }
 
+.menu-principal-true{
+    width: 15vw;
+    background-color: rgba(77, 68, 247, 0.3);
+    height: 100vh;
+}
+
+.imagen-logo{
+    width: 4vw;
+    margin-top: 40px;
+    margin-left: 1.2vw;
+}
+
+.icons-menu-hover{
+    width: 15vw;
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 80px 80px 80px 80px 80px;
+    grid-template-columns: 7vw 7vw;
+    text-align: center;
+}
+
+.desc-icono{
+    font-weight: 600;
+    position: relative;
+    bottom: 15px;
+    text-align: left;
+}
+
+.icons-menu{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 80px 80px 80px 80px 80px;
+    text-align: center;
+}
+
+.fas{
+    font-size: 20px;
+}
+
+.logo-titulo{
+    display: grid;
+    grid-template-columns: 6vw 6vw;
+}
+
+.titulo{
+    margin-top: 55px;
+}

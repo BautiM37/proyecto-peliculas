@@ -1,0 +1,20 @@
+.buscador{
+    background-color: brown;
+    min-height: 8vh;
+    margin-top: 35px;
+}
+
+.input-formulario{
+    width: 80vw;
+    height: 4vh;
+    margin-top: 1.5vh;
+    margin-left: 5vw;
+    border-radius: 15px;
+    border: solid aquamarine 3px;
+}
+
+.fa-search{
+    position: relative;
+    left: 4vw;
+    top: 5px;
+}
