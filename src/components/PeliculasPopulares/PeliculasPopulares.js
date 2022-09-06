@@ -1,0 +1,57 @@
+import React, { Component } from "react";
+import './peliculasPopulares.css';
+import CadaPelicula from '../CadaPelicula/CadaPelicula'
+
+class PeliculasPopulares extends Component {
+    constructor() {
+        super()
+        this.state = {
+            peliculas: [],
+            cantidadMostrados: 6,
+            peliculasCargadas: []
+        }
+    }
+
+    componentDidMount() {
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=51c5421e7c7f38a93e388ad6d2405b1f&language=en-US&page=1')
+            .then(res => res.json())
+            .then(data => {
+                this.setState({
+                    peliculas: data.results,
+                    peliculasCargadas: data.results
+                });
+            })
+            .catch()
+    }
+
+    cargarMas() {
+        this.setState({
+            cantidadMostrados: this.state.cantidadMostrados >= this.state.peliculas.length ?
+            this.state.cantidadMostrados : this.state.cantidadMostrados + 6
+        })
+        
+    }
+
+    cargarMenos() {
+        this.setState({
+            cantidadMostrados: this.state.cantidadMostrados > 6 ?
+            this.state.cantidadMostrados - 6 : this.state.cantidadMostrados
+        })
+    }
+
+    render() {
+        let masPeliculas = this.state.peliculas.slice((this.state.cantidadMostrados - 6), this.state.cantidadMostrados).map((unaPelicula, idx) => <CadaPelicula key={unaPelicula.title + idx} pelicula={unaPelicula} />)
+
+        let menosPeliculas = this.state.peliculas
+
+        return (
+            <section className='contenedor-peliculas'>
+                <button onClick={() => this.cargarMenos()}>Cargar Menos</button>
+                {masPeliculas}
+                <button onClick={() => this.cargarMas()}>Cargar Más</button>
+            </section>
+        )
+    }
+}
+
+export default PeliculasPopulares

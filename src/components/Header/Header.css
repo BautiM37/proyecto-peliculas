@@ -1,12 +1,16 @@
 .menu-principal-false{
-    background-color: rgba(77, 68, 247, 0.3);
+    background-color: rgba(77, 68, 247, 0.95);
     height: 100vh;
+    position: fixed;
+    width: 7vw;
 }
 
 .menu-principal-true{
     width: 15vw;
-    background-color: rgba(77, 68, 247, 0.3);
+    background-color: rgba(77, 68, 247, 0.95);
     height: 100vh;
+    position: fixed;
+    z-index: 0;
 }
 
 .imagen-logo{

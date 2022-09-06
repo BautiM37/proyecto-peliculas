@@ -1,7 +1,9 @@
 .buscador{
     background-color: brown;
     min-height: 8vh;
-    margin-top: 35px;
+
+    width: 91vw;
+    margin-left: 8vw;
 }
 
 .input-formulario{
@@ -15,6 +17,6 @@
 
 .fa-search{
     position: relative;
-    left: 4vw;
+    left: 7vw;
     top: 5px;
 }

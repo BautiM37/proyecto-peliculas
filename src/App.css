@@ -1,12 +1,23 @@
-.App {
-  display: grid;
-  grid-template-columns: 7vw 90vw;
-  justify-content: space-between;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.contenido{
+  display: grid;
+  grid-template-rows: 50vh 50vh;
+  margin-left: 8vw;
+  width: 91vw;
+}
+
+.seccion1{
+  background-color: chartreuse;
+  margin-top: 20px;
+}
+
+.seccion2{
+  background-color: magenta;
+  margin-top: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
