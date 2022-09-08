@@ -16,9 +16,9 @@ function App() {
               <h2>Películas Populares</h2>
               <PeliculasPopulares/>
             </div>
-            <div className='seccion2'>
+            {/* <div className='seccion2'>
               <h2>Películas en Cartelera</h2>
-            </div>
+            </div> */}
           </section>
           
         </section>
