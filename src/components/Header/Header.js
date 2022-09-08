@@ -10,10 +10,12 @@ class  Header extends Component {
         }
     }
 
-
     render() {
         return (    
-            <header className={'menu-principal-' + this.state.headerEnHover}>
+            <header 
+                onMouseEnter={() => this.setState({headerEnHover: true})} 
+                onMouseLeave={() => this.setState({headerEnHover: false})} 
+                className={'menu-principal-' + this.state.headerEnHover} >
 
                 {this.state.headerEnHover === false ?
                     <div className='logo-solo'>

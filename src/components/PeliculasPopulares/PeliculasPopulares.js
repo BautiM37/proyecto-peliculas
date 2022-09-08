@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './peliculasPopulares.css';
-import CadaPelicula from '../CadaPelicula/CadaPelicula'
+import CadaPelicula from '../CadaPelicula/CadaPelicula';
 
 class PeliculasPopulares extends Component {
     constructor() {
@@ -27,15 +27,15 @@ class PeliculasPopulares extends Component {
     cargarMas() {
         this.setState({
             cantidadMostrados: this.state.cantidadMostrados >= this.state.peliculas.length ?
-            this.state.cantidadMostrados : this.state.cantidadMostrados + 6
+                this.state.cantidadMostrados : this.state.cantidadMostrados + 6
         })
-        
+
     }
 
     cargarMenos() {
         this.setState({
             cantidadMostrados: this.state.cantidadMostrados > 6 ?
-            this.state.cantidadMostrados - 6 : this.state.cantidadMostrados
+                this.state.cantidadMostrados - 6 : this.state.cantidadMostrados
         })
     }
 
@@ -44,12 +44,13 @@ class PeliculasPopulares extends Component {
 
         return (
             <section className='contenedor-peliculas'>
+                
                 <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                 {masPeliculas}
-                <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>
+                {this.state.cantidadMostrados >= 19 ? <button className='ver-todas'>Ver todas</button> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
             </section>
         )
     }
 }
 
-export default PeliculasPopulares
+export default PeliculasPopulares;
