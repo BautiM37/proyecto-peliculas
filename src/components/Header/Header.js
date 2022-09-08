@@ -47,7 +47,7 @@ class  Header extends Component {
                         <i className="fas fa-solid fa-fire"></i>
                         <p className='desc-icono'>Populares</p>
                         <i className="fas fa-solid fa-clock"></i>
-                        <p className='desc-icono'>Cartelera</p>
+                        <p className='desc-icono'>Nuevas</p>
                     </div>
                 }
                 

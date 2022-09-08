@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import VerMas from '../VerMas/VerMas';
 import './cadaPelicula.css'
 
 class CadaPelicula extends Component {
@@ -40,7 +39,11 @@ class CadaPelicula extends Component {
                     <h2 className='titulo'>{this.props.pelicula.title}</h2>
                     <button className='boton-ver-mas' onClick={() => this.verMasVerMenos()}>{this.state.textoVerMas}</button>
                     <div className={'info-extra-' + this.state.claseVerMas}>
-                        <VerMas informacion={this.props.pelicula} />
+                        {this.props.pelicula.overview.length > 250 ? 
+                            <p className='overview-pelicula'>{this.props.pelicula.overview.slice(0, 250)}...</p>
+                        :
+                        <p className='overview-pelicula'>{this.props.pelicula.overview}</p>
+                        }
                     </div>
                 </section>
             </article>

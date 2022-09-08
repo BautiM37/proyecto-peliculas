@@ -52,4 +52,14 @@
     font-weight: bold;
     width: 100px;
     height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 3.5vw;
+}
+
+.overview-pelicula{
+    background-color: black;
+    color: whitesmoke;
+    position: absolute;
+    top: -150px;
 }
