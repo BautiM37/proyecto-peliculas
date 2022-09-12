@@ -42,8 +42,8 @@ class  Header extends Component {
                         <p className='desc-icono'>Home</p></Link>
                         <Link to='/favoritos'><i className="fas fa-solid fa-star"></i>
                         <p className='desc-icono'>Favoritos</p></Link>
-                        <i className="fas fa-solid fa-fire"></i>
-                        <p className='desc-icono'>Populares</p>
+                        <Link to='/populares'><i className="fas fa-solid fa-fire"></i>
+                        <p className='desc-icono'>Populares</p></Link>
                         <i className="fas fa-solid fa-clock"></i>
                         <p className='desc-icono'>Nuevas</p>
                     </div>

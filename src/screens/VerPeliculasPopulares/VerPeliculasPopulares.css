@@ -1,0 +1,10 @@
+.todas-populares{
+    width: 90vw;
+    margin-left: 8vw;
+    margin-top: 2vh;
+}
+
+.grupo-populares{
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw; 
+}

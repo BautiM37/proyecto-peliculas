@@ -38,8 +38,6 @@
 //     }
 // }   
 
-// export default PeliculasPopulares;
-
 // "CARTELERA"
 // import React, {Component} from "react";
 // import './peliculasCartel.css'
@@ -80,7 +78,6 @@
 //     }
 // }   
 
-// export default PeliculasCartel;
 
 // "CADA PELI"
 
