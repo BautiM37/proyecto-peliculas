@@ -23,7 +23,7 @@
     width: 15vw;
     margin-top: 50px;
     display: grid;
-    grid-template-rows: 80px 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px;
     grid-template-columns: 7vw 7vw;
     text-align: center;
 }

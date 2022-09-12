@@ -6,6 +6,7 @@
     margin-bottom: 12px;
     height: 300px;
     text-align: center;
+    position: relative;
 }
 
 .imagen-pelicula{
@@ -62,4 +63,11 @@
     color: whitesmoke;
     position: absolute;
     top: -150px;
+}
+
+.icono-estrella{
+    position: absolute;
+    top: 10px;
+    right: 0.5vw;
+    color: yellow;
 }
