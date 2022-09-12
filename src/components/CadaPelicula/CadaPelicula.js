@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './cadaPelicula.css'
 
 class CadaPelicula extends Component {
@@ -83,7 +84,9 @@ class CadaPelicula extends Component {
                 onMouseEnter={() => this.setState({ infoHover: 'show' })}
                 onMouseLeave={() => this.setState({ infoHover: 'hide' })}
                 className='tarjeta-pelicula' >
-                <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula' />
+                <Link to={`/pelicula/id/${this.props.pelicula.id}`}>
+                    <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula' />
+                </Link>
 
                 {/* Como estamos en la misma clase que el método, el arrow function no necesita al id como parámetro */}
                 <i onClick={() => this.agregarYSacarFavs(this.props.pelicula.id)} className={this.state.iconoEstrella}></i>
@@ -100,7 +103,6 @@ class CadaPelicula extends Component {
                     </div>
                 </section>
             </article>
-
         )
     }
 
