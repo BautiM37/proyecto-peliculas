@@ -1,30 +1,27 @@
+import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Buscador from './components/Buscador/Buscador';
-import PeliculasPopulares from './components/PeliculasPopulares/PeliculasPopulares';
+import Favoritos from './screens/Favoritos/Favoritos';
+import Home from './screens/Home/Home';
+import NotFound from './screens/NotFound/NotFound';
+
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <section>
-      <div className="App">
-        <Header />
-        <section className='pagina'>
-          <Buscador />
-          <section className='contenido'>
-            <div className='seccion1'>
-              <h2>Películas Populares</h2>
-              <PeliculasPopulares/>
-            </div>
-            {/* <div className='seccion2'>
-              <h2>Películas en Cartelera</h2>
-            </div> */}
-          </section>
-          
-        </section>
-      </div>
+    <React.Fragment>
+      <Header />
+      <Buscador />
+      <Switch>
+        <Route path="/" exact={true} component={ Home }/>
+        <Route path="/favoritos" component={ Favoritos } />
+        <Route path="" component={ NotFound } />
+      </Switch>
       <Footer />
-    </section>
+
+    </React.Fragment>
   );
 }
 

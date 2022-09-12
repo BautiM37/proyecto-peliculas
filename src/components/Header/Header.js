@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
-import imagenLogo from './logo.png'
+import imagenLogo from './logo.png';
+import { Link } from 'react-router-dom';
 
 class  Header extends Component {
     constructor(props) {
@@ -30,7 +31,6 @@ class  Header extends Component {
 
                 {this.state.headerEnHover === false ?
                     <div className='icons-menu'>
-                        <i className="fas fa-solid fa-user"></i>
                         <i className="fas fa-solid fa-home"></i>
                         <i className="fas fa-solid fa-star"></i>
                         <i className="fas fa-solid fa-fire"></i>
@@ -38,12 +38,10 @@ class  Header extends Component {
                     </div>
                     :
                     <div className='icons-menu-hover'>
-                        <i className="fas fa-solid fa-user"></i>
-                        <p className='desc-icono'>Tu perfil</p>
-                        <i className="fas fa-solid fa-home"></i>
-                        <p className='desc-icono'>Home</p>
-                        <i className="fas fa-solid fa-star"></i>
-                        <p className='desc-icono'>Favoritos</p>
+                        <Link to='/'><i className="fas fa-solid fa-home"></i>
+                        <p className='desc-icono'>Home</p></Link>
+                        <Link to='/favoritos'><i className="fas fa-solid fa-star"></i>
+                        <p className='desc-icono'>Favoritos</p></Link>
                         <i className="fas fa-solid fa-fire"></i>
                         <p className='desc-icono'>Populares</p>
                         <i className="fas fa-solid fa-clock"></i>
