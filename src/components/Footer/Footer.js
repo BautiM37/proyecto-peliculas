@@ -7,11 +7,11 @@ class  Footer extends Component {
 
     render() {
     return(
-        <footer className='header'>
+        <footer className='footer'>
             <ul class="team">
                 <li>Bautista Migliore</li>
                 <li>Joaquin Finkelstein</li>
-                <li>Facundo Martinez</li>
+                <li>Facundo Martínez Zorzi</li>
             </ul>
         </footer> 
     )}
