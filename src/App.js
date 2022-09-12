@@ -8,6 +8,7 @@ import Home from './screens/Home/Home';
 import NotFound from './screens/NotFound/NotFound';
 import DetallePelicula from './screens/DetallePelicula/DetallePelicula';
 import VerPeliculasPopulares from './screens/VerPeliculasPopulares/VerPeliculasPopulares';
+import VerPeliculasCartel from './screens/VerPeliculasCartel/VerPeliculasCartel';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' exact={true} component={ Home }/>
         <Route path='/favoritos' component={ Favoritos } />
         <Route path='/populares' component={ VerPeliculasPopulares }/>
+        <Route path='/cartelera' component={ VerPeliculasCartel }/>
         <Route path='/pelicula/id/:id' component={ DetallePelicula }/>
         <Route path='' component={ NotFound } />
       </Switch>
