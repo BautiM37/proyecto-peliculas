@@ -92,7 +92,7 @@ class CadaSerie extends Component {
                 <i onClick={() => this.agregarYSacarFavs(this.props.serie.id)} className={this.state.iconoEstrella}></i>
 
                 <section className={'seccion-' + this.state.infoHover}>
-                    <h2 className='titulo'>{this.props.serie.title}</h2>
+                    <h2 className='titulo'>{this.props.serie.name}</h2>
                     <button className='boton-ver-mas' onClick={() => this.verMasVerMenos()}>{this.state.textoVerMas}</button>
                     <div className={'info-extra-' + this.state.claseVerMas}>
                         {this.props.serie.overview.length > 250 ?
