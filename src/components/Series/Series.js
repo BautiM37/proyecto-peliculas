@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Series.css';
 import CadaSerie from "../CadaSerie/CadaSerie";
+import { Link } from 'react-router-dom';
 
 class Series extends Component {
     constructor() {
@@ -46,7 +47,7 @@ class Series extends Component {
                 
                 <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas-series"></i>
                 {masSeries}
-                {this.state.cantMostrados >= 19 ? <button className='ver-todas-series'>Ver todas</button> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas-series"></i>}
+                {this.state.cantMostrados >= 19 ? <Link to='/seriestv'><button className='ver-todas-series'>Ver todas</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas-series"></i>}
             </section>
         )
     }

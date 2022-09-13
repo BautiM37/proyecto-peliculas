@@ -10,6 +10,7 @@ import DetallePelicula from './screens/DetallePelicula/DetallePelicula';
 import VerPeliculasPopulares from './screens/VerPeliculasPopulares/VerPeliculasPopulares';
 import VerPeliculasCartel from './screens/VerPeliculasCartel/VerPeliculasCartel';
 import DetalleSerie from './screens/DetalleSerie/DetalleSerie';
+import VerSeries from './screens/VerSeries/VerSeries';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/favoritos' component={ Favoritos } />
         <Route path='/populares' component={ VerPeliculasPopulares }/>
         <Route path='/cartelera' component={ VerPeliculasCartel }/>
+        <Route path='/seriestv' component={ VerSeries }/>
         <Route path='/pelicula/id/:id' component={ DetallePelicula }/>
         <Route path='/serie/id/:id' component={ DetalleSerie }/>
         <Route path='' component={ NotFound } />

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './peliculasPopulares.css';
 import CadaPelicula from "../CadaPelicula/CadaPelicula";
+import { Link } from 'react-router-dom';
 
 class PeliculasPopulares extends Component {
     constructor() {
@@ -47,7 +48,7 @@ class PeliculasPopulares extends Component {
                 
                 <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                 {masPeliculas}
-                {this.state.cantidadMostrados >= 19 ? <button className='ver-todas'>Ver todas</button> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                {this.state.cantidadMostrados >= 19 ? <Link to='/populares'><button className='ver-todas'>Ver todas</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
             </section>
         )
     }
