@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
-class  Footer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
+import React from 'react';
+import './Footer.css';
 
-    render() {
+function Footer() {
+
     return(
         <footer className='footer'>
-            <ul class="team">
-                <li>Bautista Migliore</li>
-                <li>Joaquin Finkelstein</li>
-                <li>Facundo Martínez Zorzi</li>
-            </ul>
+            <p className='equipo'>Developed by: Bautista Migliore, Facundo Martínez Zorzi y Joaquín Finkelstein</p>
         </footer> 
-    )}
+    )
 }
 
 export default Footer;

@@ -1,9 +1,11 @@
 .buscador{
-    background-color: brown;
+    background-color: rgb(5, 7, 47);
     min-height: 8vh;
-
-    width: 91vw;
-    margin-left: 8vw;
+    border-radius: 20px;
+    width: 87vw;
+    margin-left: 10vw;
+    position: relative;
+    top: 1vh;
 }
 
 .input-formulario{

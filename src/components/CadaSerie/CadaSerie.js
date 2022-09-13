@@ -8,7 +8,7 @@ class CadaSerie extends Component {
         this.state = {
             verMas: false,
             claseVerMas: 'esconder',
-            textoVerMas: 'Ver Más',
+            textoVerMas: 'See More',
             infoHover: 'hide',
             esFavorito: false,
             iconoEstrella: "fas fa-regular fa-circle icono-estrella"
@@ -36,13 +36,13 @@ class CadaSerie extends Component {
     verMasVerMenos() {
         if (!this.state.verMas) {
             this.setState({
-                textoVerMas: "Ver Menos",
+                textoVerMas: "See Less",
                 verMas: true,
                 claseVerMas: 'mostrar'
             })
         } else {
             this.setState({
-                textoVerMas: 'Ver Más',
+                textoVerMas: 'See More',
                 verMas: false,
                 claseVerMas: 'esconder'
             })

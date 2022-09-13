@@ -45,9 +45,9 @@ class Series extends Component {
         return (
             <section className='contenedor-series'>
                 
-                <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas-series"></i>
+                <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                 {masSeries}
-                {this.state.cantMostrados >= 19 ? <Link to='/seriestv'><button className='ver-todas-series'>Ver todas</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas-series"></i>}
+                {this.state.cantMostrados >= 19 ? <Link to='/seriestv'><button className='ver-todas-series'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
             </section>
         )
     }

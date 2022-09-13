@@ -46,7 +46,7 @@ class VerPeliculasCartel extends Component {
                 <div className="grupo-cartel">
                     {todasPeliculas}
                 </div>
-                <button onClick={() => this.traerMas()}>Traer Más</button>
+                <button onClick={() => this.traerMas()}>Get More</button>
             </section>
         )
     }

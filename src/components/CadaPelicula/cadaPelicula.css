@@ -1,7 +1,7 @@
 .tarjeta-pelicula{
     width: 14vw;
     background-color: black;
-    border: 2px solid blue;
+    border: 1px solid rgb(5, 7, 47);
     border-radius: 20px;
     margin-bottom: 12px;
     height: 300px;
@@ -36,6 +36,7 @@
 .titulo{
     font-size: 22px;
     color: white;
+    margin-top: 55px;
 }
 
 .info-extra-esconder{

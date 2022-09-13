@@ -19,15 +19,15 @@ class Home extends Component {
                     <section className='pagina'>
                         <section className='contenido'>
                             <div className='seccion1'>
-                                <h2>Películas Populares</h2>
+                                <h2 className="titulo-seccion">Popular Films</h2>
                                 <PeliculasPopulares />
                             </div>
                             <div className='seccion2'>
-                                <h2>Películas en Cartelera</h2>
+                                <h2 className="titulo-seccion">New Releases</h2>
                                 <PeliculasCartel />
                             </div>
                             <div className='seccion3'>
-                                <h2>Series de TV</h2>
+                                <h2 className="titulo-seccion">TV Shows</h2>
                                 <Series />
                             </div>
                         </section>

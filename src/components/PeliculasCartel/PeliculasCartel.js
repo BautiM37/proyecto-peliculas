@@ -48,7 +48,7 @@ class PeliculasCartel extends Component {
                 <section className="tarjetas-varias">
                     <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                     {masPeliculas}
-                    {this.state.cantidadMostrados >= 19 ? <Link to='/cartelera'><button className='ver-todas'>Ver todas</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                    {this.state.cantidadMostrados >= 19 ? <Link to='/cartelera'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
                 </section>
             </div>
         )

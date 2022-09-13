@@ -1,56 +1,58 @@
-.menu-principal-false{
-    background-color: rgba(77, 68, 247, 0.95);
+.menu-principal-false {
+    background-color: rgba(5, 7, 47, 0.95);
     height: 100vh;
     position: fixed;
     width: 7vw;
 }
 
-.menu-principal-true{
+.menu-principal-true {
     width: 15vw;
-    background-color: rgba(77, 68, 247, 0.95);
+    background-color: rgba(5, 7, 47, 0.95);
     height: 100vh;
     position: fixed;
     z-index: 1;
 }
 
-.imagen-logo{
+.imagen-logo {
     width: 4vw;
     margin-top: 40px;
     margin-left: 1.2vw;
+    transform: rotate(-17deg);
 }
 
-.icons-menu-hover{
+.icons-menu-hover {
     width: 15vw;
     margin-top: 50px;
     display: grid;
     grid-template-rows: 80px 80px 80px 80px;
-    grid-template-columns: 7vw 7vw;
     text-align: center;
 }
 
-.desc-icono{
-    font-weight: 600;
-    position: relative;
-    bottom: 15px;
-    text-align: left;
-}
-
-.icons-menu{
+.icons-menu {
     margin-top: 50px;
     display: grid;
     grid-template-rows: 80px 80px 80px 80px 80px;
     text-align: center;
 }
 
-.fas{
+.fas {
     font-size: 20px;
+    color: whitesmoke;
 }
 
-.logo-titulo{
+.logo-titulo {
     display: grid;
     grid-template-columns: 6vw 6vw;
 }
 
-.titulo{
+.nombre-pag {
     margin-top: 55px;
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+.fa-code {
+    position: fixed;
+    bottom: 3vh;
+    left: 2.75vw;
 }

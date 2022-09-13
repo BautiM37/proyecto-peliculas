@@ -1,7 +1,7 @@
 .tarjeta-serie{
     width: 14vw;
     background-color: black;
-    border: 2px solid blue;
+    border: 1px solid rgb(5, 7, 47);
     border-radius: 20px;
     margin-bottom: 12px;
     height: 300px;
@@ -31,11 +31,6 @@
 
 .descripcion{
     font-size: 16px;
-}
-
-.titulo{
-    font-size: 22px;
-    color: white;
 }
 
 .info-extra-esconder{

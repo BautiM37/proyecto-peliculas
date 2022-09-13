@@ -24,7 +24,7 @@ class DetalleSerie extends Component {
         return (
             <section className="detalle-serie">
                 <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.serie.backdrop_path} className='imagen-detalle-serie'/>
-                <h2 className="titulo-detalle-serie">Detalle "{this.state.serie.name}"</h2>
+                <h2 className="titulo-detalle-serie">"{this.state.serie.name}"</h2>
             </section>
         )
     }

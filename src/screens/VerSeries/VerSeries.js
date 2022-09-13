@@ -46,7 +46,7 @@ class VerSeries extends Component {
                 <div className="grupo-series">
                     {todasSeries}
                 </div>
-                <button onClick={() => this.traerMas()}>Traer Más</button>
+                <button onClick={() => this.traerMas()}>Get More</button>
             </section>
         )
     }

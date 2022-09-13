@@ -46,7 +46,7 @@ class VerPeliculasPopulares extends Component {
                 <div className="grupo-populares">
                     {todasPeliculas}
                 </div>
-                <button onClick={() => this.traerMas()}>Traer Más</button>
+                <button onClick={() => this.traerMas()}>Get More</button>
             </section>
         )
     }

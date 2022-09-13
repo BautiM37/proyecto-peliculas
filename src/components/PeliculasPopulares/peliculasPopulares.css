@@ -7,6 +7,12 @@
 .flechas{
     position: relative;
     top: 15vh;
+    color: rgb(5, 7, 47);
+}
+
+.fa-chevron-right{
+    position: relative;
+    left: 1vw;
 }
 
 .ver-todas{

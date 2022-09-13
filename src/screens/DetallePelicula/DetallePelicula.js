@@ -25,7 +25,7 @@ class DetallePelicula extends Component {
         return (
             <section className="detalle-pelicula">
                 <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.pelicula.backdrop_path} className='imagen-detalle'/>
-                <h2 className="titulo-detalle">Detalle "{this.state.pelicula.title}"</h2>
+                <h2 className="titulo-detalle">"{this.state.pelicula.title}"</h2>
             </section>
         )
     }

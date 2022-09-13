@@ -1,7 +1,7 @@
 .footer{
- 
-}
-
-team{
-
+    position: fixed;
+    bottom: 0;
+    left: 0.5vw;
+    width: 15vw;
+    color: whitesmoke;
 }

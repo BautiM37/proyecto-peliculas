@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './Header.css';
 import imagenLogo from './logo.png';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
-class  Header extends Component {
+class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,10 +13,10 @@ class  Header extends Component {
     }
 
     render() {
-        return (    
-            <header 
-                onMouseEnter={() => this.setState({headerEnHover: true})} 
-                onMouseLeave={() => this.setState({headerEnHover: false})} 
+        return (
+            <header
+                onMouseEnter={() => this.setState({ headerEnHover: true })}
+                onMouseLeave={() => this.setState({ headerEnHover: false })}
                 className={'menu-principal-' + this.state.headerEnHover} >
 
                 {this.state.headerEnHover === false ?
@@ -25,7 +26,7 @@ class  Header extends Component {
                     :
                     <div className='logo-titulo'>
                         <img alt='' src={imagenLogo} className='imagen-logo' />
-                        <h1 className='titulo'>MovieSpot</h1>
+                        <h1 className='nombre-pag'>MovieSpot</h1>
                     </div>
                 }
 
@@ -39,22 +40,19 @@ class  Header extends Component {
                     </div>
                     :
                     <div className='icons-menu-hover'>
-                        <Link to='/'><i className="fas fa-solid fa-home"></i>
-                        <p className='desc-icono'>Home</p></Link>
-                        <Link to='/favoritos'><i className="fas fa-solid fa-star"></i>
-                        <p className='desc-icono'>Favoritos</p></Link>
-                        <Link to='/populares'><i className="fas fa-solid fa-fire"></i>
-                        <p className='desc-icono'>Populares</p></Link>
-                        <Link to='/cartelera'><i className="fas fa-solid fa-clock"></i>
-                        <p className='desc-icono'>Nuevas</p></Link>
-                        <Link to='/seriestv'><i className="fas fa-solid fa-tv"></i>
-                        <p className='desc-icono'>Series TV</p></Link>
+                        <Link to='/'><i className="fas fa-solid fa-home">  Home</i></Link>
+                        <Link to='/favoritos'><i className="fas fa-solid fa-star">  Favourites</i></Link>
+                        <Link to='/populares'><i className="fas fa-solid fa-fire">  Populars</i></Link>
+                        <Link to='/cartelera'><i className="fas fa-solid fa-clock">  New Releases</i></Link>
+                        <Link to='/seriestv'><i className="fas fa-solid fa-tv">  TV Shows</i></Link>
                     </div>
                 }
-                
-            </header> 
+
+                {this.state.headerEnHover === false ? <i className="fas fa-solid fa-code"></i> : <Footer />}
+
+            </header>
         )
     }
 }
- 
+
 export default Header;

@@ -11,18 +11,20 @@
   }
   
   .seccion1{
-    background-color: chartreuse;
     margin-top: 20px;
   }
   
   .seccion2{
-    background-color: magenta;
     margin-top: 20px;
   }
   
   .seccion3{
-    background-color: green;
     margin-top: 20px;
+  }
+
+  .titulo-seccion{
+    margin-left: 3vw;
+    color: rgb(5, 7, 47);
   }
   
   @media (prefers-reduced-motion: no-preference) {
