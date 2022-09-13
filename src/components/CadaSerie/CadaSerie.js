@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './CadaSerie.css'
+import './CadaSerie.css';
+import sinFoto from './sinFoto.jpg';
 
 class CadaSerie extends Component {
     constructor(props) {
@@ -85,7 +86,11 @@ class CadaSerie extends Component {
                 onMouseLeave={() => this.setState({ infoHover: 'hide' })}
                 className='tarjeta-serie' >
                 <Link to={`/serie/id/${this.props.serie.id}`}>
-                    <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-serie' />
+                    {this.props.serie.poster_path !== null ?
+                        <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-serie' />
+                        :
+                        <img src={sinFoto} alt='' className='imagen-nohay' />
+                    }
                 </Link>
 
                 {/* Como estamos en la misma clase que el método, el arrow function no necesita al id como parámetro */}
