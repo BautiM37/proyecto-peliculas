@@ -17,15 +17,15 @@ class CadaSerie extends Component {
 
     // con el DidMount chequeamos el estado de las tarjetas para evitar que, al recargarse la página, estas se renderizen por primera vez y muestren un estado incorrecto (favoritos). Todo esto maneja que el ícono de estrella de fav sea correcto.
     componentDidMount() {
-        let favoritos = [];
-        let conseguirFavoritos = localStorage.getItem('favoritos'); // puede estar vacío
+        let favoritosSeries = [];
+        let conseguirFavoritosSeries = localStorage.getItem('favoritosSeries'); // puede estar vacío
 
-        if (conseguirFavoritos !== null) {
+        if (conseguirFavoritosSeries !== null) {
             // para trabajar bien con el localStorage, tenemos que pasar la info a array. Va a ser muy dificil trabajar con una cadena de texto.
-            let favsArray = JSON.parse(conseguirFavoritos);
-            favoritos = favsArray
+            let favsArray = JSON.parse(conseguirFavoritosSeries);
+            favoritosSeries = favsArray
 
-            if (favoritos.includes(this.props.serie.id)) { // includes --> true o false
+            if (favoritosSeries.includes(this.props.serie.id)) { // includes --> true o false
                 this.setState({
                     iconoEstrella: "fas fa-solid fa-star icono-estrella"
                 })
@@ -50,30 +50,30 @@ class CadaSerie extends Component {
     }
 
     agregarYSacarFavs(id) {
-        let favoritos = [];
-        let conseguirFavoritos = localStorage.getItem('favoritos');
+        let favoritosSeries = [];
+        let conseguirFavoritosSeries = localStorage.getItem('favoritosSeries');
 
-        if (conseguirFavoritos !== null) {
-            let favsArray = JSON.parse(conseguirFavoritos);
-            favoritos = favsArray
+        if (conseguirFavoritosSeries !== null) {
+            let favsArray = JSON.parse(conseguirFavoritosSeries);
+            favoritosSeries = favsArray
         }
-        if (favoritos.includes(id)) {
+        if (favoritosSeries.includes(id)) {
             // sacar el ID del array, pisando el array de favoritos con el filtro nuevo
-            favoritos = favoritos.filter(cadaID => cadaID !== id);
+            favoritosSeries = favoritosSeries.filter(cadaID => cadaID !== id);
             this.setState({
                 iconoEstrella: "fas fa-regular fa-circle icono-estrella"
             })
         } else {
             // cuando el ID no está en el array, lo agregamos
-            favoritos.push(id);
+            favoritosSeries.push(id);
             this.setState({
                 iconoEstrella: "fas fa-solid fa-star icono-estrella"
             })
         }
 
         // convertir a string para almacenarlo en localStorage
-        let favsString = JSON.stringify(favoritos);
-        localStorage.setItem('favoritos', favsString)
+        let favsString = JSON.stringify(favoritosSeries);
+        localStorage.setItem('favoritosSeries', favsString)
 
     }
 
@@ -83,9 +83,9 @@ class CadaSerie extends Component {
             <article
                 onMouseEnter={() => this.setState({ infoHover: 'show' })}
                 onMouseLeave={() => this.setState({ infoHover: 'hide' })}
-                className='tarjeta-pelicula' >
+                className='tarjeta-serie' >
                 <Link to={`/serie/id/${this.props.serie.id}`}>
-                    <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-pelicula' />
+                    <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-serie' />
                 </Link>
 
                 {/* Como estamos en la misma clase que el método, el arrow function no necesita al id como parámetro */}
@@ -96,9 +96,9 @@ class CadaSerie extends Component {
                     <button className='boton-ver-mas' onClick={() => this.verMasVerMenos()}>{this.state.textoVerMas}</button>
                     <div className={'info-extra-' + this.state.claseVerMas}>
                         {this.props.serie.overview.length > 250 ?
-                            <p className='overview-pelicula'>{this.props.serie.overview.slice(0, 250)}...</p>
+                            <p className='overview-serie'>{this.props.serie.overview.slice(0, 250)}...</p>
                             :
-                            <p className='overview-pelicula'>{this.props.serie.overview}</p>
+                            <p className='overview-serie'>{this.props.serie.overview}</p>
                         }
                     </div>
                 </section>

@@ -1,4 +1,4 @@
-.tarjeta-pelicula{
+.tarjeta-serie{
     width: 14vw;
     background-color: black;
     border: 2px solid blue;
@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.imagen-pelicula{
+.imagen-serie{
     width: 13vw;
     margin-top: 10px;
     border-radius: 10px;
@@ -58,7 +58,7 @@
     right: 3.5vw;
 }
 
-.overview-pelicula{
+.overview-serie{
     background-color: black;
     color: whitesmoke;
     position: absolute;
