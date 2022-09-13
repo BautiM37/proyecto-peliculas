@@ -6,7 +6,8 @@ class DetalleSerie extends Component {
         super(props)
         this.state = {
             id: props.match.params.id,
-            serie: []
+            serie: [],
+            generos: []
         }
     }
     componentDidMount(){
@@ -14,17 +15,25 @@ class DetalleSerie extends Component {
         .then(res => res.json())
             .then(data => {
                 this.setState({
-                    serie: data
+                    serie: data,
+                    generos: data.genres
                 });
             })
             .catch()
     }
 
     render() {
+        let generoSerie = this.state.generos.map((unGenero, idz) => ' ' + (idz+1) + ') ' + unGenero.name)
+        
         return (
-            <section className="detalle-serie">
-                <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.serie.backdrop_path} className='imagen-detalle-serie'/>
-                <h2 className="titulo-detalle-serie">"{this.state.serie.name}"</h2>
+            <section className="detalle-pelicula">
+                <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.serie.backdrop_path}
+                className='imagen-detalle'/>
+                <h2 className="titulo-detalle">"{this.state.serie.name}"</h2>
+                <p className="overview-detalle">{this.state.serie.overview}</p>
+                <p className="generoPeli">{'Genre/s: ' + generoSerie}</p>
+                <p className="release-date">{this.state.serie.first_air_date}</p>
+                <p className="rating">rating: {this.state.serie.vote_average}</p> 
             </section>
         )
     }

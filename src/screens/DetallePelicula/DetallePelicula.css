@@ -1,8 +1,80 @@
 .detalle-pelicula{
-    margin-left: 8vw;
-    width: 90vw;
+    margin-left: 10vw;
+    width: 88vw;
+    height: 40vh;
+    position: relative;
 }
 
 .imagen-detalle{
     margin-top: 2vh;
+    width: 86.75vw;
+    border-radius: 20px;
+    border: 2px solid rgb(5, 7, 47);
+}
+
+.titulo-detalle{
+    position: absolute;
+    top: 0.5vw;
+    left: 1vw;
+    font-size: 30px;
+    background-color: rgba(5, 7, 47, 0.5);
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+.overview-detalle{
+    position: absolute;
+    top: 4vw;
+    left: 1vw;
+    width: 35vw;
+    background-color: rgba(5, 7, 47, 0.5);
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 2vh 1vw 2vh 1vw;
+    margin-top: 30px;
+}
+
+.generoPeli{
+    background-color: rgba(5, 7, 47, 0.5);
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 2vh 1vw 2vh 1vw;
+    margin-top: 30px;
+    position: absolute;
+    top: 0.3vw;
+    right: 2vw;
+}
+
+.release-date{
+    background-color: rgba(5, 7, 47, 0.5);
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 2vh 1vw 2vh 1vw;
+    margin-top: 30px;
+    position: absolute;
+    top: 4.2vw;
+    right: 2vw;
+}
+
+.rating{
+    background-color: rgba(5, 7, 47, 0.5);
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 2vh 1vw 2vh 1vw;
+    margin-top: 30px;
+    position: absolute;
+    top: 8.1vw;
+    right: 2vw;
+}
+
+.duracion{
+    background-color: rgba(5, 7, 47, 0.5);
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 2vh 1vw 2vh 1vw;
+    margin-top: 30px;
+    position: absolute;
+    top: 12vw;
+    right: 2vw;
 }
