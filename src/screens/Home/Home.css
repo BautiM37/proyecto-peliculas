@@ -20,6 +20,11 @@
     margin-top: 20px;
   }
   
+  .seccion3{
+    background-color: green;
+    margin-top: 20px;
+  }
+  
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
       animation: App-logo-spin infinite 20s linear;

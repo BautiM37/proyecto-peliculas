@@ -1,0 +1,73 @@
+.tarjeta-pelicula{
+    width: 14vw;
+    background-color: black;
+    border: 2px solid blue;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.imagen-pelicula{
+    width: 13vw;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.seccion-hide{
+    display: none;
+}
+
+.seccion-show{
+    display: block;
+    position: relative;
+    bottom: 180px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 125px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.descripcion{
+    font-size: 16px;
+}
+
+.titulo{
+    font-size: 22px;
+    color: white;
+}
+
+.info-extra-esconder{
+    display: none;
+}
+
+.info-extra-mostrar{
+    display: block;
+}
+
+.boton-ver-mas{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: whitesmoke;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 3.5vw;
+}
+
+.overview-pelicula{
+    background-color: black;
+    color: whitesmoke;
+    position: absolute;
+    top: -150px;
+}
+
+.icono-estrella{
+    position: absolute;
+    top: 10px;
+    right: 0.5vw;
+    color: yellow;
+}

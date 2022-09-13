@@ -1,0 +1,17 @@
+.contenedor-series{
+    display: grid;
+    grid-template-columns: 2vw 14vw 14vw 14vw 14vw 14vw 14vw 2vw;
+    justify-content: space-around;
+}
+
+.flechas-series{
+    position: relative;
+    top: 15vh;
+}
+
+.ver-todas-series{
+    width: 6vw;
+    height: 30px;
+    margin-top: 15vh;
+    margin-left: 2vw;
+}

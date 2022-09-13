@@ -35,6 +35,7 @@ class  Header extends Component {
                         <i className="fas fa-solid fa-star"></i>
                         <i className="fas fa-solid fa-fire"></i>
                         <i className="fas fa-solid fa-clock"></i>
+                        <i className="fas fa-solid fa-tv"></i>
                     </div>
                     :
                     <div className='icons-menu-hover'>
@@ -46,6 +47,8 @@ class  Header extends Component {
                         <p className='desc-icono'>Populares</p></Link>
                         <Link to='/cartelera'><i className="fas fa-solid fa-clock"></i>
                         <p className='desc-icono'>Nuevas</p></Link>
+                        <Link to='/seriestv'><i className="fas fa-solid fa-tv"></i>
+                        <p className='desc-icono'>Series TV</p></Link>
                     </div>
                 }
                 

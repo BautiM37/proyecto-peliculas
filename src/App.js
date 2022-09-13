@@ -9,6 +9,7 @@ import NotFound from './screens/NotFound/NotFound';
 import DetallePelicula from './screens/DetallePelicula/DetallePelicula';
 import VerPeliculasPopulares from './screens/VerPeliculasPopulares/VerPeliculasPopulares';
 import VerPeliculasCartel from './screens/VerPeliculasCartel/VerPeliculasCartel';
+import DetalleSerie from './screens/DetalleSerie/DetalleSerie';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/populares' component={ VerPeliculasPopulares }/>
         <Route path='/cartelera' component={ VerPeliculasCartel }/>
         <Route path='/pelicula/id/:id' component={ DetallePelicula }/>
+        <Route path='/serie/id/:id' component={ DetalleSerie }/>
         <Route path='' component={ NotFound } />
       </Switch>
       <Footer />
