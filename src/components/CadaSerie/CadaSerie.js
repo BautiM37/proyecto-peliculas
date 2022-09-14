@@ -79,7 +79,6 @@ class CadaSerie extends Component {
     }
 
     render() {
-        console.log(this.props.serie)
         return (
             <article
                 onMouseEnter={() => this.setState({ infoHover: 'show' })}
