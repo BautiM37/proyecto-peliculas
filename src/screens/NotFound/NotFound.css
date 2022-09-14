@@ -1,0 +1,16 @@
+.contenido-notFound{
+    background-color: rgba(5, 7, 47, 0.5);
+    min-height: 8vh;
+    border-radius: 20px;
+    width: 87vw;
+    margin-left: 10vw;
+    position: relative;
+    top: 1vh;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.travolta{
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
