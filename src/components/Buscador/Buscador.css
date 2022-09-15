@@ -1,4 +1,4 @@
-.buscador{
+.buscador {
     background-color: rgb(5, 7, 47);
     min-height: 8vh;
     border-radius: 20px;
@@ -8,7 +8,7 @@
     top: 1vh;
 }
 
-.input-formulario{
+.input-formulario {
     width: 80vw;
     height: 4vh;
     margin-top: 1.5vh;
@@ -17,8 +17,17 @@
     border: solid aquamarine 3px;
 }
 
-.fa-search{
+.fa-search {
     position: relative;
     left: 7vw;
     top: 5px;
+}
+
+@media (max-width: 700px) {
+    .buscador {
+        margin-top: 20px;
+        width: 96vw;
+        margin-left: 2vw;
+        border-radius: 10px;
+    }
 }

@@ -82,10 +82,10 @@ class CadaSerie extends Component {
             <article
                 onMouseEnter={() => this.setState({ infoHover: 'show' })}
                 onMouseLeave={() => this.setState({ infoHover: 'hide' })}
-                className='tarjeta-serie' >
-                <Link to={`/serie/id/${this.props.serie.id}`}>
+                className='tarjeta-pelicula' >
+                <Link to={`/show/id/${this.props.serie.id}`}>
                     {this.props.serie.poster_path !== null ?
-                        <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-serie' />
+                        <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-pelicula' />
                         :
                         <img src='/sinFoto.jpg' alt='' className='imagen-nohay' />
                     }
@@ -99,9 +99,9 @@ class CadaSerie extends Component {
                     <button className='boton-ver-mas' onClick={() => this.verMasVerMenos()}>{this.state.textoVerMas}</button>
                     <div className={'info-extra-' + this.state.claseVerMas}>
                         {this.props.serie.overview.length > 250 ?
-                            <p className='overview-serie'>{this.props.serie.overview.slice(0, 250)}...</p>
+                            <p className='overview-pelicula'>{this.props.serie.overview.slice(0, 250)}...</p>
                             :
-                            <p className='overview-serie'>{this.props.serie.overview}</p>
+                            <p className='overview-pelicula'>{this.props.serie.overview}</p>
                         }
                     </div>
                 </section>

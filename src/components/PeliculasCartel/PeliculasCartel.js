@@ -45,10 +45,11 @@ class PeliculasCartel extends Component {
 
         return (
             <div>
-                <section className="tarjetas-varias">
+                <section className="contenedor-peliculas">
                     <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                     {masPeliculas}
-                    {this.state.cantidadMostrados >= 19 ? <Link to='/cartelera'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                    {this.state.cantidadMostrados >= 19 ? <Link to='/newreleases'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                    <Link to='/newreleases'><button className='ver-todas-phone'>See all</button></Link>
                 </section>
             </div>
         )

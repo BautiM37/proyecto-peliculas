@@ -10,22 +10,24 @@ import VerPeliculasPopulares from './screens/VerPeliculasPopulares/VerPeliculasP
 import VerPeliculasCartel from './screens/VerPeliculasCartel/VerPeliculasCartel';
 import DetalleSerie from './screens/DetalleSerie/DetalleSerie';
 import VerSeries from './screens/VerSeries/VerSeries';
+import imagenLogo from './components/Header/logo.png';
 
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <React.Fragment>
+      <img alt='' src={imagenLogo} className='imagen-logo-phone' />
       <Header />
       <Buscador />
       <Switch>
         <Route path='/' exact={true} component={ Home }/>
-        <Route path='/favoritos' component={ Favoritos } />
-        <Route path='/populares' component={ VerPeliculasPopulares }/>
-        <Route path='/cartelera' component={ VerPeliculasCartel }/>
-        <Route path='/seriestv' component={ VerSeries }/>
-        <Route path='/pelicula/id/:id' component={ DetallePelicula }/>
-        <Route path='/serie/id/:id' component={ DetalleSerie }/>
+        <Route path='/favourites' component={ Favoritos } />
+        <Route path='/populars' component={ VerPeliculasPopulares }/>
+        <Route path='/newreleases' component={ VerPeliculasCartel }/>
+        <Route path='/tvshows' component={ VerSeries }/>
+        <Route path='/film/id/:id' component={ DetallePelicula }/>
+        <Route path='/show/id/:id' component={ DetalleSerie }/>
         <Route path='' component={ NotFound } />
       </Switch>
 

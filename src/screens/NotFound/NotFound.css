@@ -14,3 +14,14 @@
     border-radius: 20px;
     margin-bottom: 10px;
 }
+
+@media (max-width: 700px) {
+    .contenido-notFound{
+        width: 96vw;
+        margin-left: 2vw;
+        justify-content: space-around;
+    }
+    .travolta{
+        width: 87vw;
+    }
+}

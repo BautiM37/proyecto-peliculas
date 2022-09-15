@@ -60,7 +60,7 @@ class Favoritos extends Component {
 
         return (
             <section className="contenedor-favoritos">
-                <h2>Favourites</h2>
+                <h2 className="titulo-favs">Favourites</h2>
                 <section className="display-favoritos">
                     {pelisFavoritas}
                     {seriesFavoritas}

@@ -48,7 +48,8 @@ class PeliculasPopulares extends Component {
                 
                 <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                 {masPeliculas}
-                {this.state.cantidadMostrados >= 19 ? <Link to='/populares'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                {this.state.cantidadMostrados >= 19 ? <Link to='/populars'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                <Link to='/populars'><button className='ver-todas-phone'>See all</button></Link>
             </section>
         )
     }

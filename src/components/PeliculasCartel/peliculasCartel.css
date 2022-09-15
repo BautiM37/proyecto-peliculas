@@ -1,5 +1,0 @@
-.tarjetas-varias{
-    display: grid;
-    grid-template-columns: 2vw 14vw 14vw 14vw 14vw 14vw 14vw 2vw;
-    justify-content: space-around;
-}

@@ -20,4 +20,32 @@
     height: 30px;
     margin-top: 15vh;
     margin-left: 2vw;
+    border-radius: 3px;
+    background-color: rgb(5, 7, 47);
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.ver-todas-phone{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .contenedor-peliculas{
+        display: grid;
+        grid-template-columns: 27vw 27vw 27vw;
+        grid-template-rows: 40vw 40vw;
+    }
+
+    .flechas{
+        display: none;
+    }
+
+    .ver-todas-phone{
+        display: block;
+        border-radius: 3px;
+        background-color: rgb(5, 7, 47);
+        color: whitesmoke;
+        font-weight: bold;
+    }
 }

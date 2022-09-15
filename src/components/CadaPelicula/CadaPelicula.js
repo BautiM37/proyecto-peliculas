@@ -84,7 +84,7 @@ class CadaPelicula extends Component {
                 onMouseEnter={() => this.setState({ infoHover: 'show' })}
                 onMouseLeave={() => this.setState({ infoHover: 'hide' })}
                 className='tarjeta-pelicula' >
-                <Link to={`/pelicula/id/${this.props.pelicula.id}`}>
+                <Link to={`/film/id/${this.props.pelicula.id}`}>
                     {this.props.pelicula.poster_path !== null ?
                     <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula' />
                     :

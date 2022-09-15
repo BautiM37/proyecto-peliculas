@@ -6,3 +6,9 @@
     color: whitesmoke;
     font-weight: bold;
 }
+
+@media (max-width: 700px) {
+    .footer{
+        display: none;
+    }
+}

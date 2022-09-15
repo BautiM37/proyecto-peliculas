@@ -1,4 +1,4 @@
-.tarjeta-pelicula{
+.tarjeta-pelicula {
     width: 14vw;
     background-color: black;
     border: 1px solid rgb(5, 7, 47);
@@ -9,24 +9,24 @@
     position: relative;
 }
 
-.imagen-pelicula{
+.imagen-pelicula {
     width: 13vw;
     margin-top: 10px;
     border-radius: 10px;
 }
 
-.imagen-nohay{
+.imagen-nohay {
     width: 13vw;
     margin-top: 10px;
     border-radius: 10px;
     height: 282px;
 }
 
-.seccion-hide{
+.seccion-hide {
     display: none;
 }
 
-.seccion-show{
+.seccion-show {
     display: block;
     position: relative;
     bottom: 180px;
@@ -36,25 +36,21 @@
     border-bottom-right-radius: 10px;
 }
 
-.descripcion{
-    font-size: 16px;
-}
-
-.titulo{
+.titulo {
     font-size: 22px;
     color: white;
     margin-top: 55px;
 }
 
-.info-extra-esconder{
+.info-extra-esconder {
     display: none;
 }
 
-.info-extra-mostrar{
+.info-extra-mostrar {
     display: block;
 }
 
-.boton-ver-mas{
+.boton-ver-mas {
     background-color: rgba(0, 0, 0, 0.9);
     color: whitesmoke;
     border-radius: 5px;
@@ -66,16 +62,58 @@
     right: 3.5vw;
 }
 
-.overview-pelicula{
+.overview-pelicula {
     background-color: black;
     color: whitesmoke;
     position: absolute;
     top: -150px;
 }
 
-.icono-estrella{
+.icono-estrella {
     position: absolute;
     top: 10px;
     right: 0.5vw;
     color: yellow;
+}
+
+@media (max-width: 700px) {
+
+    .tarjeta-pelicula {
+        border-radius: 10px;
+        height: 150px;
+        width: 27vw;
+    }
+
+    .imagen-pelicula {
+        width: 17vw;
+        margin-top: 5px;
+    }
+
+    .imagen-nohay {
+        width: 17vw;
+        margin-top: 5px;
+        height: 110px;
+    }
+
+    .seccion-hide {
+        display: block;
+    }
+
+    .seccion-show,
+    .boton-ver-mas {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 10px;
+        color: white;
+        margin-top: 0px;
+    }
+
+    .icono-estrella {
+        position: absolute;
+        top: 7px;
+        right: 0.5vw;
+        font-size: 15px;
+    }
 }

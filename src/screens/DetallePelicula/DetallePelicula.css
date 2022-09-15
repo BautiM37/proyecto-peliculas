@@ -1,18 +1,18 @@
-.detalle-pelicula{
+.detalle-pelicula {
     margin-left: 10vw;
     width: 88vw;
     height: 40vh;
     position: relative;
 }
 
-.imagen-detalle{
+.imagen-detalle {
     margin-top: 2vh;
     width: 86.75vw;
     border-radius: 20px;
     border: 2px solid rgb(5, 7, 47);
 }
 
-.titulo-detalle{
+.titulo-detalle {
     position: absolute;
     top: 0.5vw;
     left: 1vw;
@@ -23,7 +23,7 @@
     padding: 1vh 1vw 1vh 1vw;
 }
 
-.overview-detalle{
+.overview-detalle {
     position: absolute;
     top: 4vw;
     left: 1vw;
@@ -35,7 +35,7 @@
     margin-top: 30px;
 }
 
-.generoPeli{
+.generoPeli {
     background-color: rgba(5, 7, 47, 0.5);
     color: whitesmoke;
     border-radius: 8px;
@@ -46,7 +46,7 @@
     right: 2vw;
 }
 
-.release-date{
+.release-date {
     background-color: rgba(5, 7, 47, 0.5);
     color: whitesmoke;
     border-radius: 8px;
@@ -57,7 +57,7 @@
     right: 2vw;
 }
 
-.rating{
+.rating {
     background-color: rgba(5, 7, 47, 0.5);
     color: whitesmoke;
     border-radius: 8px;
@@ -68,7 +68,7 @@
     right: 2vw;
 }
 
-.duracion{
+.duracion {
     background-color: rgba(5, 7, 47, 0.5);
     color: whitesmoke;
     border-radius: 8px;
@@ -79,14 +79,85 @@
     right: 2vw;
 }
 
-.sin-imagen-detalle{
+.sin-imagen-detalle {
     width: 87vw;
     height: 49vw;
     margin-top: 20px;
     border-radius: 20px;
 }
 
-#fav-detalle{
+#fav-detalle {
     margin-right: 1vw;
     margin-top: 1vw;
+}
+
+@media (max-width: 700px) {
+    .detalle-pelicula {
+        margin-left: 2vw;
+        width: 96vw;
+    }
+
+    .imagen-detalle {
+        width: 95vw;
+        border-radius: 10px;
+    }
+
+    .titulo-detalle {
+        position: absolute;
+        top: 2.5vw;
+        font-size: 13px;
+        padding: 0.3vh 0.3vw 0.3vh 0.3vw;
+    }
+
+    .overview-detalle {
+        position: absolute;
+        left: 0;
+        top: 55vw;
+        width: 95vw;
+        padding: 1vh 0.5vw 1vh 0.5vw;
+        font-size: 10px;
+    }
+
+    .generoPeli {
+        font-size: 10px;
+        border-radius: 5px;
+        padding: 1vh 0.5vw 1vh 0.5vw;
+        position: absolute;
+        top: 43vw;
+    }
+
+    .release-date {
+        border-radius: 5px;
+        padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+        position: absolute;
+        top: 2vw;
+        font-size: 10px;
+    }
+
+    .rating {
+        border-radius: 5px;
+        padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+        position: absolute;
+        top: 8vw;
+        font-size: 10px;
+    }
+
+    .duracion {
+        border-radius: 5px;
+        padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+        position: absolute;
+        top: 14vw;
+        font-size: 10px;
+    }
+
+    .sin-imagen-detalle {
+        width: 95vw;
+        border-radius: 10px;
+        height: 55vw;
+    }
+
+    #fav-detalle {
+        margin-right: 2vw;
+        margin-top: 3.5vw;
+    }
 }

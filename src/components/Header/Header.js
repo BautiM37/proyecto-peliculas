@@ -32,19 +32,19 @@ class Header extends Component {
 
                 {this.state.headerEnHover === false ?
                     <div className='icons-menu'>
-                        <i className="fas fa-solid fa-home"></i>
-                        <i className="fas fa-solid fa-star"></i>
-                        <i className="fas fa-solid fa-fire"></i>
-                        <i className="fas fa-solid fa-clock"></i>
-                        <i className="fas fa-solid fa-tv"></i>
+                        <Link to='/'><i className="fas fa-solid fa-home"></i></Link>
+                        <Link to='/favourites'><i className="fas fa-solid fa-star"></i></Link>
+                        <Link to='/populars'><i className="fas fa-solid fa-fire"></i></Link>
+                        <Link to='/newreleases'><i className="fas fa-solid fa-clock"></i></Link>
+                        <Link to='/tvshows'><i className="fas fa-solid fa-tv"></i></Link>
                     </div>
                     :
                     <div className='icons-menu-hover'>
-                        <Link to='/'><i className="fas fa-solid fa-home">  Home</i></Link>
-                        <Link to='/favoritos'><i className="fas fa-solid fa-star">  Favourites</i></Link>
-                        <Link to='/populares'><i className="fas fa-solid fa-fire">  Populars</i></Link>
-                        <Link to='/cartelera'><i className="fas fa-solid fa-clock">  New Releases</i></Link>
-                        <Link to='/seriestv'><i className="fas fa-solid fa-tv">  TV Shows</i></Link>
+                        <Link to='/'><i className="fas fa-solid fa-home"><p className='descripcion-iconos'>Home</p></i></Link>
+                        <Link to='/favourites'><i className="fas fa-solid fa-star"><p className='descripcion-iconos'>Favourites</p></i></Link>
+                        <Link to='/populars'><i className="fas fa-solid fa-fire"><p className='descripcion-iconos'>Populars</p></i></Link>
+                        <Link to='/newreleases'><i className="fas fa-solid fa-clock"><p className='descripcion-iconos'>New Releases</p></i></Link>
+                        <Link to='/tvshows'><i className="fas fa-solid fa-tv"><p className='descripcion-iconos'>TV Shows</p></i></Link>
                     </div>
                 }
 
