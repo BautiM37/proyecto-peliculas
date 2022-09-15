@@ -1,21 +1,21 @@
-.todas-vistas{
+.todas-vistas {
     width: 87vw;
     margin-left: 10vw;
 }
 
-.grupo-vistas{
+.grupo-vistas {
     display: grid;
     margin-top: 2vw;
-    grid-template-columns: 14.6vw 14.6vw 14.6vw 14.6vw 14.6vw 14.6vw; 
+    grid-template-columns: 14.6vw 14.6vw 14.6vw 14.6vw 14.6vw 14.6vw;
 }
 
-.titulo-vistas{
+.titulo-vistas {
     margin-top: 3vw;
     color: rgb(5, 7, 47);
     margin-left: 0.2vw;
 }
 
-.boton-traer{
+.boton-traer {
     margin-bottom: 2vw;
     border-radius: 3px;
     background-color: rgb(5, 7, 47);
@@ -24,28 +24,31 @@
     font-weight: bold;
 }
 
-.seccion-boton{
+.seccion-boton {
     text-align: center;
 }
 
 @media (max-width: 700px) {
-    .todas-vistas{
+    .todas-vistas {
         margin-left: 2vw;
         width: 96vw;
         margin-top: 40px;
     }
-    .grupo-vistas{
+
+    .grupo-vistas {
         display: grid;
         grid-template-columns: 27vw 27vw 27vw;
         margin-bottom: 10px;
         justify-content: space-around;
     }
-    .boton-traer{
+
+    .boton-traer {
         margin-bottom: 110px;
         border-radius: 3px;
         height: 35px;
     }
-    .titulo-vistas{
+
+    .titulo-vistas {
         margin-left: 2.5vw;
         margin-top: 40px;
     }

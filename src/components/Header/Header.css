@@ -57,7 +57,7 @@
     left: 2.75vw;
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
     .menu-principal-false {
         bottom: 0;
         height: 10vh;
@@ -82,7 +82,11 @@
         margin-top: 35px;
     }
 
-    .logo-titulo, .nombre-pag, .fa-code, .descripcion-iconos, .logo-solo {
+    .logo-titulo,
+    .nombre-pag,
+    .fa-code,
+    .descripcion-iconos,
+    .logo-solo {
         display: none;
     }
 }

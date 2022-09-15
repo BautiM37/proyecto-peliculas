@@ -12,7 +12,7 @@ class CadaSerie extends Component {
             infoHover: 'hide',
             esFavorito: false,
             iconoEstrella: "fas fa-regular fa-circle icono-estrella"
-        }
+        };
     }
 
     // con el DidMount chequeamos el estado de las tarjetas para evitar que, al recargarse la página, estas se renderizen por primera vez y muestren un estado incorrecto (favoritos). Todo esto maneja que el ícono de estrella de fav sea correcto.
@@ -23,7 +23,7 @@ class CadaSerie extends Component {
         if (conseguirFavoritosSeries !== null) {
             // para trabajar bien con el localStorage, tenemos que pasar la info a array. Va a ser muy dificil trabajar con una cadena de texto.
             let favsArray = JSON.parse(conseguirFavoritosSeries);
-            favoritosSeries = favsArray
+            favoritosSeries = favsArray;
 
             if (favoritosSeries.includes(this.props.serie.id)) { // includes --> true o false
                 this.setState({
@@ -55,7 +55,7 @@ class CadaSerie extends Component {
 
         if (conseguirFavoritosSeries !== null) {
             let favsArray = JSON.parse(conseguirFavoritosSeries);
-            favoritosSeries = favsArray
+            favoritosSeries = favsArray;
         }
         if (favoritosSeries.includes(id)) {
             // sacar el ID del array, pisando el array de favoritos con el filtro nuevo
@@ -73,7 +73,7 @@ class CadaSerie extends Component {
 
         // convertir a string para almacenarlo en localStorage
         let favsString = JSON.stringify(favoritosSeries);
-        localStorage.setItem('favoritosSeries', favsString)
+        localStorage.setItem('favoritosSeries', favsString);
 
     }
 
@@ -84,10 +84,16 @@ class CadaSerie extends Component {
                 onMouseLeave={() => this.setState({ infoHover: 'hide' })}
                 className='tarjeta-pelicula' >
                 <Link to={`/show/id/${this.props.serie.id}`}>
-                    {this.props.serie.poster_path !== null ?
-                        <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-pelicula' />
-                        :
-                        <img src='/sinFoto.jpg' alt='' className='imagen-nohay' />
+                    {
+                        this.props.serie.length === 0 ?
+                            <video preload='auto' className='imagen-nohay'>
+                                <source src='/Loader.mp4' type='video/mp4' />
+                            </video>
+                            :
+                            this.props.serie.poster_path !== null ?
+                                <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-pelicula' />
+                                :
+                                <img src='/sinFoto.jpg' alt='' className='imagen-nohay' />
                     }
                 </Link>
 

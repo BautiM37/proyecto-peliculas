@@ -3,10 +3,10 @@ import './Footer.css';
 
 function Footer() {
 
-    return(
+    return (
         <footer className='footer'>
             <p className='equipo'>Developed by: Bautista Migliore, Facundo Martínez Zorzi y Joaquín Finkelstein</p>
-        </footer> 
+        </footer>
     )
 }
 

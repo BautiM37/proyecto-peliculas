@@ -1,26 +1,26 @@
-.contenedor-favoritos{
+.contenedor-favoritos {
     width: 90vw;
     margin-left: 8vw;
 }
 
-.display-favoritos{
+.display-favoritos {
     display: grid;
-    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw; 
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
 }
 
 @media (max-width: 700px) {
-    .contenedor-favoritos{
-       margin-left: 0vw;
-       width: 100vw;
+    .contenedor-favoritos {
+        margin-left: 0vw;
+        width: 100vw;
     }
 
-    .display-favoritos{
+    .display-favoritos {
         display: grid;
         grid-template-columns: 27vw 27vw 27vw;
         justify-content: space-around;
     }
 
-    .titulo-favs{
+    .titulo-favs {
         margin-left: 4.5vw;
         margin-top: 40px;
     }

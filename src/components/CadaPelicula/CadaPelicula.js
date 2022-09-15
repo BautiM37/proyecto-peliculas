@@ -12,7 +12,7 @@ class CadaPelicula extends Component {
             infoHover: 'hide',
             esFavorito: false,
             iconoEstrella: "fas fa-regular fa-circle icono-estrella"
-        }
+        };
     }
 
     // con el DidMount chequeamos el estado de las tarjetas para evitar que, al recargarse la página, estas se renderizen por primera vez y muestren un estado incorrecto (favoritos). Todo esto maneja que el ícono de estrella de fav sea correcto.
@@ -23,7 +23,7 @@ class CadaPelicula extends Component {
         if (conseguirFavoritos !== null) {
             // para trabajar bien con el localStorage, tenemos que pasar la info a array. Va a ser muy dificil trabajar con una cadena de texto.
             let favsArray = JSON.parse(conseguirFavoritos);
-            favoritos = favsArray
+            favoritos = favsArray;
 
             if (favoritos.includes(this.props.pelicula.id)) { // includes --> true o false
                 this.setState({
@@ -55,7 +55,7 @@ class CadaPelicula extends Component {
 
         if (conseguirFavoritos !== null) {
             let favsArray = JSON.parse(conseguirFavoritos);
-            favoritos = favsArray
+            favoritos = favsArray;
         }
         if (favoritos.includes(id)) {
             // sacar el ID del array, pisando el array de favoritos con el filtro nuevo
@@ -73,9 +73,8 @@ class CadaPelicula extends Component {
 
         // convertir a string para almacenarlo en localStorage
         let favsString = JSON.stringify(favoritos);
-        localStorage.setItem('favoritos', favsString)
+        localStorage.setItem('favoritos', favsString);
 
-        console.log(localStorage)
     }
 
     render() {
@@ -85,12 +84,18 @@ class CadaPelicula extends Component {
                 onMouseLeave={() => this.setState({ infoHover: 'hide' })}
                 className='tarjeta-pelicula' >
                 <Link to={`/film/id/${this.props.pelicula.id}`}>
-                    {this.props.pelicula.poster_path !== null ?
-                    <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula' />
-                    :
-                    <img src='/sinFoto.jpg' alt='' className='imagen-nohay'/>
-                }
-                    
+                    {
+                        this.props.pelicula.length === 0 ?
+                            <video preload='auto' className='imagen-nohay'>
+                                <source src='/Loader.mp4' type='video/mp4' />
+                            </video>
+                            :
+                            this.props.pelicula.poster_path !== null ?
+                                <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula' />
+                                :
+                                <img src='/sinFoto.jpg' alt='' className='imagen-nohay' />
+                    }
+
                 </Link>
 
                 {/* Como estamos en la misma clase que el método, el arrow function no necesita al id como parámetro */}

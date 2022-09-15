@@ -61,11 +61,16 @@ class DetalleSerie extends Component {
         return (
             <section className="detalle-pelicula">
                 {
-                    this.state.serie.backdrop_path !== null ?
-                        <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.serie.backdrop_path}
-                            className='imagen-detalle' />
+                    this.state.serie.length === 0 ?
+                        <video preload='auto' className='imagen-nohay'>
+                            <source src='/Loader.mp4' type='video/mp4' />
+                        </video>
                         :
-                        <img src='/NoImageYet.png' alt='' className='sin-imagen-detalle' />
+                        this.state.serie.backdrop_path !== null ?
+                            <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.serie.backdrop_path}
+                                className='imagen-detalle' />
+                            :
+                            <img src='/NoImageYet.png' alt='' className='sin-imagen-detalle' />
                 }
                 <h2 className="titulo-detalle">"{this.state.serie.name}"</h2>
                 <p className="overview-detalle">{this.state.serie.overview}</p>

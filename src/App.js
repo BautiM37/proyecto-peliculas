@@ -21,14 +21,14 @@ function App() {
       <Header />
       <Buscador />
       <Switch>
-        <Route path='/' exact={true} component={ Home }/>
-        <Route path='/favourites' component={ Favoritos } />
-        <Route path='/populars' component={ VerPeliculasPopulares }/>
-        <Route path='/newreleases' component={ VerPeliculasCartel }/>
-        <Route path='/tvshows' component={ VerSeries }/>
-        <Route path='/film/id/:id' component={ DetallePelicula }/>
-        <Route path='/show/id/:id' component={ DetalleSerie }/>
-        <Route path='' component={ NotFound } />
+        <Route path='/' exact={true} component={Home} />
+        <Route path='/favourites' component={Favoritos} />
+        <Route path='/populars' component={VerPeliculasPopulares} />
+        <Route path='/newreleases' component={VerPeliculasCartel} />
+        <Route path='/tvshows' component={VerSeries} />
+        <Route path='/film/id/:id' component={DetallePelicula} />
+        <Route path='/show/id/:id' component={DetalleSerie} />
+        <Route path='' component={NotFound} />
       </Switch>
 
     </React.Fragment>

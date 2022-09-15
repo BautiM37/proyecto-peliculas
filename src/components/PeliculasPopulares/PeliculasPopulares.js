@@ -45,7 +45,7 @@ class PeliculasPopulares extends Component {
 
         return (
             <section className='contenedor-peliculas'>
-                
+
                 <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
                 {masPeliculas}
                 {this.state.cantidadMostrados >= 19 ? <Link to='/populars'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}

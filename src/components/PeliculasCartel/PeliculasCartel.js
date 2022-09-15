@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './peliculasCartel.css'
+import './peliculasCartel.css';
 import CadaPelicula from "../CadaPelicula/CadaPelicula";
 import { Link } from 'react-router-dom';
 

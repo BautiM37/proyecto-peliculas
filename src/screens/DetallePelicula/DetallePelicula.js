@@ -61,10 +61,16 @@ class DetallePelicula extends Component {
 
         return (
             <section className="detalle-pelicula">
-                {this.state.pelicula.poster_path !== null ?
-                    <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.pelicula.backdrop_path} className='imagen-detalle' />
-                    :
-                    <img src='/NoImageYet.png' alt='' className='sin-imagen-detalle' />
+                {
+                    this.state.pelicula.length === 0 ?
+                        <video preload='auto' className='imagen-nohay'>
+                            <source src='/Loader.mp4' type='video/mp4' />
+                        </video>
+                        :
+                        this.state.pelicula.poster_path !== null ?
+                            <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.pelicula.backdrop_path} className='imagen-detalle' />
+                            :
+                            <img src='/NoImageYet.png' alt='' className='sin-imagen-detalle' />
                 }
                 <h2 className="titulo-detalle">"{this.state.pelicula.title}"</h2>
                 <p className="overview-detalle">{this.state.pelicula.overview}</p>
