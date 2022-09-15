@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './CadaSerie.css';
-import sinFoto from './sinFoto.jpg';
 
 class CadaSerie extends Component {
     constructor(props) {
@@ -88,7 +87,7 @@ class CadaSerie extends Component {
                     {this.props.serie.poster_path !== null ?
                         <img src={'https://image.tmdb.org/t/p/w342' + this.props.serie.poster_path} alt="" className='imagen-serie' />
                         :
-                        <img src={sinFoto} alt='' className='imagen-nohay' />
+                        <img src='/sinFoto.jpg' alt='' className='imagen-nohay' />
                     }
                 </Link>
 

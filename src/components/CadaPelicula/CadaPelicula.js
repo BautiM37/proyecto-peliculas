@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './cadaPelicula.css'
-import sinFoto from './sinFoto.jpg'
+import './cadaPelicula.css';
 
 class CadaPelicula extends Component {
     constructor(props) {
@@ -89,7 +88,7 @@ class CadaPelicula extends Component {
                     {this.props.pelicula.poster_path !== null ?
                     <img src={'https://image.tmdb.org/t/p/w342/' + this.props.pelicula.poster_path} alt="" className='imagen-pelicula' />
                     :
-                    <img src={sinFoto} alt='' className='imagen-nohay'/>
+                    <img src='/sinFoto.jpg' alt='' className='imagen-nohay'/>
                 }
                     
                 </Link>

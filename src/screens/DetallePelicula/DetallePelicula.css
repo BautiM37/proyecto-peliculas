@@ -78,3 +78,15 @@
     top: 12vw;
     right: 2vw;
 }
+
+.sin-imagen-detalle{
+    width: 87vw;
+    height: 49vw;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#fav-detalle{
+    margin-right: 1vw;
+    margin-top: 1vw;
+}

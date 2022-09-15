@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './DetallePelicula.css'
+import './DetallePelicula.css';
 
 class DetallePelicula extends Component {
     constructor(props) {
@@ -61,18 +61,33 @@ class DetallePelicula extends Component {
 
         return (
             <section className="detalle-pelicula">
-                <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.pelicula.backdrop_path} className='imagen-detalle' />
+                {this.state.pelicula.poster_path !== null ?
+                    <img alt='' src={'https://image.tmdb.org/t/p/w1280/' + this.state.pelicula.backdrop_path} className='imagen-detalle' />
+                    :
+                    <img src='/NoImageYet.png' alt='' className='sin-imagen-detalle' />
+                }
                 <h2 className="titulo-detalle">"{this.state.pelicula.title}"</h2>
                 <p className="overview-detalle">{this.state.pelicula.overview}</p>
                 <p className="generoPeli">{'Genre/s: ' + generoPelicula}</p>
                 <p className="release-date">{this.state.pelicula.release_date}</p>
-                <p className="rating">rating: {this.state.pelicula.vote_average}</p>
-                <p className="duracion">{this.state.pelicula.runtime} minutes</p>
+                {
+                    this.state.pelicula.vote_average === 0 ?
+                        <p className="rating">unknown rating</p>
+                        :
+                        <p className="rating">rating: {this.state.pelicula.vote_average}</p>
+                }
+                {
+                    this.state.pelicula.runtime === 0 ?
+                        <p className="duracion">unknown length</p>
+                        :
+                        <p className="duracion">{this.state.pelicula.runtime} minutes</p>
+                }
+
                 {
                     this.state.esFav === true ?
-                        <i onClick={() => this.agregarYSacarFavs(this.state.pelicula.id)} className="fas fa-solid fa-star icono-estrella"></i>
+                        <i onClick={() => this.agregarYSacarFavs(this.state.pelicula.id)} className="fas fa-solid fa-star icono-estrella" id="fav-detalle"></i>
                         :
-                        <i onClick={() => this.agregarYSacarFavs(this.state.pelicula.id)} className="fas fa-solid fa-circle icono-estrella"></i>
+                        <i onClick={() => this.agregarYSacarFavs(this.state.pelicula.id)} className="fas fa-solid fa-circle icono-estrella" id="fav-detalle"></i>
                 }
             </section>
         )
