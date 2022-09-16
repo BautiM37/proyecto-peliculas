@@ -11,7 +11,7 @@ class CadaSerie extends Component {
             textoVerMas: 'See More',
             infoHover: 'hide',
             esFavorito: false,
-            iconoEstrella: "fas fa-regular fa-circle icono-estrella"
+            iconoEstrella: "fas fa-regular fa-star icono-estrella-1"
         };
     }
 
@@ -61,7 +61,7 @@ class CadaSerie extends Component {
             // sacar el ID del array, pisando el array de favoritos con el filtro nuevo
             favoritosSeries = favoritosSeries.filter(cadaID => cadaID !== id);
             this.setState({
-                iconoEstrella: "fas fa-regular fa-circle icono-estrella"
+                iconoEstrella: "fas fa-regular fa-star icono-estrella-1"
             })
         } else {
             // cuando el ID no está en el array, lo agregamos
