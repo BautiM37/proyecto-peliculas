@@ -28,6 +28,32 @@
     text-align: center;
 }
 
+.contenido-filtro {
+    background-color: rgb(5, 7, 47);
+    min-height: 8vh;
+    border-radius: 20px;
+    width: 87vw;
+    margin-left: 10vw;
+    position: relative;
+    top: 1vh;
+    text-align: center;
+}
+
+.input-filtro{
+    width: 60vw;
+    margin-top: 15px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.busqueda-filtro{
+    border-radius: 5px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
 @media (max-width: 700px) {
     .todas-vistas {
         margin-left: 2vw;
@@ -52,4 +78,12 @@
         margin-left: 2.5vw;
         margin-top: 40px;
     }
+    .contenido-filtro {
+        border-radius: 10px;
+        width: 92vw;
+        margin-left: 4vw;
+        position: relative;
+        top: 2vh;
+    }
 }
+

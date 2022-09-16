@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Buscador from './components/Buscador/Buscador';
 import Favoritos from './screens/Favoritos/Favoritos';
 import Home from './screens/Home/Home';
 import NotFound from './screens/NotFound/NotFound';
@@ -19,7 +18,6 @@ function App() {
     <React.Fragment>
       <img alt='' src={imagenLogo} className='imagen-logo-phone' />
       <Header />
-      <Buscador />
       <Switch>
         <Route path='/' exact={true} component={Home} />
         <Route path='/favourites' component={Favoritos} />

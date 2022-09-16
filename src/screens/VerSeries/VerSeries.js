@@ -8,7 +8,8 @@ class VerSeries extends Component {
         this.state = {
             series: [],
             seriesCargadas: [],
-            page: 1
+            page: 1,
+            valor: ''
         }
     }
 
@@ -38,19 +39,48 @@ class VerSeries extends Component {
             .catch()
     }
 
+    // detener que el form se envíe, "event" se reemplaza por el evento en cuestión cuando se lo llame
+    evitarSubmit(event) {
+        event.preventDefault();
+    }
+
+    // obtener el valor ingresado por el usuario en el campo input, actualizando el estado interno del componente con setState()
+    guardarCambios(event) {
+        this.setState({
+            valor: event.target.value
+        },
+            () => this.filtrarContenido(this.state.valor)
+        );
+    }
+
+    filtrarContenido(filtro) {
+        let seriesFiltradas = this.state.seriesCargadas.filter(serie => serie.name.toLowerCase().includes(filtro))
+
+        this.setState({
+            series: seriesFiltradas
+        })
+    }
+
     render() {
         let todasSeries = this.state.series.map((unaSerie, idy) => <CadaSerie key={unaSerie.name + idy} serie={unaSerie} />)
 
         return (
-            <section className="todas-vistas">
-                <h2 className="titulo-vistas">TV Shows</h2>
-                <div className="grupo-vistas">
-                    {todasSeries}
-                </div>
-                <div className="seccion-boton">
-                    <button onClick={() => this.traerMas()} className='boton-traer'>Get More</button>
-                </div>
-            </section>
+            <React.Fragment>
+                <section className="contenido-filtro">
+                    <form onSubmit={(event) => this.evitarSubmit(event)} className='formulario-filtro'>
+                        <input type='text' onChange={(event) => this.guardarCambios(event)} value={this.state.valor} className='input-filtro' />
+                    </form>
+                </section>
+                <section className="todas-vistas">
+                    <h2 className="titulo-vistas">TV Shows</h2>
+                    <div className="grupo-vistas">
+                        {todasSeries}
+                    </div>
+                    <div className="seccion-boton">
+                        <button onClick={() => this.traerMas()} className='boton-traer'>Get More</button>
+                    </div>
+                </section>
+            </React.Fragment>
         )
     }
 }

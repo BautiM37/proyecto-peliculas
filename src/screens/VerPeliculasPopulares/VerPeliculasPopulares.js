@@ -8,7 +8,8 @@ class VerPeliculasPopulares extends Component {
         this.state = {
             peliculas: [],
             peliculasCargadas: [],
-            page: 1
+            page: 1,
+            valor: ''
         }
     }
 
@@ -38,19 +39,48 @@ class VerPeliculasPopulares extends Component {
             .catch()
     }
 
+    // detener que el form se envíe, "event" se reemplaza por el evento en cuestión cuando se lo llame
+    evitarSubmit(event) {
+        event.preventDefault();
+    }
+
+    // obtener el valor ingresado por el usuario en el campo input, actualizando el estado interno del componente con setState()
+    guardarCambios(event) {
+        this.setState({
+            valor: event.target.value
+        },
+            () => this.filtrarContenido(this.state.valor)
+        );
+    }
+
+    filtrarContenido(filtro) {
+        let peliculasFiltradas = this.state.peliculasCargadas.filter(pelicula => pelicula.title.toLowerCase().includes(filtro))
+    
+        this.setState({
+            peliculas: peliculasFiltradas
+        })
+    }
+
     render() {
         let todasPeliculas = this.state.peliculas.map((unaPelicula, idx) => <CadaPelicula key={unaPelicula.title + idx} pelicula={unaPelicula} />)
 
         return (
-            <section className="todas-vistas">
-                <h2 className="titulo-vistas">Popular Films</h2>
-                <div className="grupo-vistas">
-                    {todasPeliculas}
-                </div>
-                <div className="seccion-boton">
-                    <button onClick={() => this.traerMas()} className='boton-traer'>Get More</button>
-                </div>
-            </section>
+            <React.Fragment>
+                <section className="contenido-filtro">
+                    <form onSubmit={(event) => this.evitarSubmit(event)} className='formulario-filtro'>
+                        <input type='text' onChange={(event) => this.guardarCambios(event)} value={this.state.valor} className='input-filtro' />
+                    </form>
+                </section>
+                <section className="todas-vistas">
+                    <h2 className="titulo-vistas">Popular Films</h2>
+                    <div className="grupo-vistas">
+                        {todasPeliculas}
+                    </div>
+                    <div className="seccion-boton">
+                        <button onClick={() => this.traerMas()} className='boton-traer'>Get More</button>
+                    </div>
+                </section>
+            </React.Fragment>
         )
     }
 }
