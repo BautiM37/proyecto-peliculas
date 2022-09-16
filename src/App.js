@@ -9,14 +9,13 @@ import VerPeliculasPopulares from './screens/VerPeliculasPopulares/VerPeliculasP
 import VerPeliculasCartel from './screens/VerPeliculasCartel/VerPeliculasCartel';
 import DetalleSerie from './screens/DetalleSerie/DetalleSerie';
 import VerSeries from './screens/VerSeries/VerSeries';
-import imagenLogo from './components/Header/logo.png';
 
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <React.Fragment>
-      <img alt='' src={imagenLogo} className='imagen-logo-phone' />
+      <img alt='' src='/logo.png' className='imagen-logo-phone' />
       <Header />
       <Switch>
         <Route path='/' exact={true} component={Home} />

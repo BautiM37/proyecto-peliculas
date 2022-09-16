@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Header.css';
-import imagenLogo from './logo.png';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 
@@ -21,11 +20,11 @@ class Header extends Component {
 
                 {this.state.headerEnHover === false ?
                     <div className='logo-solo'>
-                        <img alt='' src={imagenLogo} className='imagen-logo' />
+                        <img alt='' src='/logo.png' className='imagen-logo' />
                     </div>
                     :
                     <div className='logo-titulo'>
-                        <img alt='' src={imagenLogo} className='imagen-logo' />
+                        <img alt='' src='/logo.png' className='imagen-logo' />
                         <h1 className='nombre-pag'>MovieSpot</h1>
                     </div>
                 }
