@@ -12,10 +12,12 @@ class Buscador extends Component {
     noRecarga(e) {
         e.preventDefault();
 
-        this.props.buscar();
+      
     }
     guardaDatos(e) {
-        this.setState({ valor: e.target.value });
+        this.setState({ valor: e.target.value },
+            ()=> this.props.busqueda(this.state.valor)
+            );
     };
 
     render() {
@@ -23,7 +25,7 @@ class Buscador extends Component {
             <section className='buscador'>
                 <form onSubmit={(e) => this.noRecarga(e)}>
                     <input className='placeholder' type='text' placeholder='!Encontrá lo que estes buscando!' onChange={(e) => this.guardaDatos(e)} value={this.state.valor} />
-                    <input className='boton' type='submit' onClick={(e) => this.noRecarga(e)} />
+                   
                 </form>
             </section>
         )
