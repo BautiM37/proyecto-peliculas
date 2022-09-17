@@ -68,7 +68,7 @@ class VerSeries extends Component {
             <React.Fragment>
                 <section className="contenido-filtro">
                     <form onSubmit={(event) => this.evitarSubmit(event)} className='formulario-filtro'>
-                        <input type='text' onChange={(event) => this.guardarCambios(event)} value={this.state.valor} className='input-filtro' />
+                        <input type='text' onChange={(event) => this.guardarCambios(event)} value={this.state.valor} className='input-filtro' placeholder="Filter results"/>
                     </form>
                 </section>
                 <section className="todas-vistas">
