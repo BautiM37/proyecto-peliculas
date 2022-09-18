@@ -43,13 +43,20 @@ class Series extends Component {
         let masSeries = this.state.series.slice((this.state.cantMostrados - 6), this.state.cantMostrados).map((unaSerie, idy) => <CadaSerie key={unaSerie.name + idy} serie={unaSerie} />)
 
         return (
-            <section className='contenedor-peliculas'>
+            <React.Fragment>
+                {
+                    this.state.series.length === 0 ?
+                        <img src="/loader.gif" alt="loading content" />
+                        :
+                        <section className='contenedor-peliculas'>
 
-                <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
-                {masSeries}
-                {this.state.cantMostrados >= 19 ? <Link to='/tvshows'><button className='ver-todas-series'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
-                <Link to='/tvshows'><button className='ver-todas-phone'>See all</button></Link>
-            </section>
+                            <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
+                            {masSeries}
+                            {this.state.cantMostrados >= 19 ? <Link to='/tvshows'><button className='ver-todas-series'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                            <Link to='/tvshows'><button className='ver-todas-phone'>See all</button></Link>
+                        </section>
+                }
+            </React.Fragment>
         )
     }
 }

@@ -69,15 +69,25 @@ class Home extends Component {
                                     :
                                     <section className="resultados-busqueda">
                                         <h2 className="titulo-seccion">Film results for "{this.state.resultadoBusqueda}"</h2>
-                                        <div className='seccion-busqueda'>
-                                            {this.state.peliculasBuscadas.map((unaPelicula, idx) => <CadaPelicula key={unaPelicula.title + idx} pelicula={unaPelicula} />)}
+                                        {
+                                            this.state.peliculasBuscadas.length === 0 ?
+                                                <img src="/loader.gif" alt="loading content" />
+                                                :
+                                                <div className='seccion-busqueda'>
+                                                    {this.state.peliculasBuscadas.map((unaPelicula, idx) => <CadaPelicula key={unaPelicula.title + idx} pelicula={unaPelicula} />)}
 
-                                        </div>
+                                                </div>
+                                        }
                                         <h2 className="titulo-seccion">TV Show results for "{this.state.resultadoBusqueda}"</h2>
-                                        <div className='seccion-busqueda'>
-                                            {this.state.seriesBuscadas.map((unaSerie, idx) => <CadaSerie key={unaSerie.title + idx} serie={unaSerie} />)}
+                                        {
+                                            this.state.seriesBuscadas.length === 0 ?
+                                                <img src="/loader.gif" alt="loading content" />
+                                                :
+                                                <div className='seccion-busqueda'>
+                                                    {this.state.seriesBuscadas.map((unaSerie, idx) => <CadaSerie key={unaSerie.title + idx} serie={unaSerie} />)}
 
-                                        </div>
+                                                </div>
+                                        }
                                         <div className="nada-phone">
 
                                         </div>

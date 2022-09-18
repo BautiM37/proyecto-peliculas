@@ -44,14 +44,19 @@ class PeliculasCartel extends Component {
         let masPeliculas = this.state.peliculas.slice((this.state.cantidadMostrados - 6), this.state.cantidadMostrados).map((unaPelicula, idx) => <CadaPelicula key={unaPelicula.title + idx} pelicula={unaPelicula} />)
 
         return (
-            <div>
-                <section className="contenedor-peliculas">
-                    <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
-                    {masPeliculas}
-                    {this.state.cantidadMostrados >= 19 ? <Link to='/newreleases'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
-                    <Link to='/newreleases'><button className='ver-todas-phone'>See all</button></Link>
-                </section>
-            </div>
+            <React.Fragment>
+                {
+                    this.state.peliculas.length === 0 ?
+                        <img src="/loader.gif" alt="loading content" />
+                        :
+                        <section className="contenedor-peliculas">
+                            <i onClick={() => this.cargarMenos()} className="fas fa-solid fa-chevron-left flechas"></i>
+                            {masPeliculas}
+                            {this.state.cantidadMostrados >= 19 ? <Link to='/newreleases'><button className='ver-todas'>See all</button></Link> : <i onClick={() => this.cargarMas()} className="fas fa-solid fa-chevron-right flechas"></i>}
+                            <Link to='/newreleases'><button className='ver-todas-phone'>See all</button></Link>
+                        </section>
+                }
+            </React.Fragment>
         )
     }
 }
