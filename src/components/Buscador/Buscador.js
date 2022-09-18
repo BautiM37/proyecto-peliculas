@@ -12,20 +12,19 @@ class Buscador extends Component {
     noRecarga(e) {
         e.preventDefault();
 
-      
     }
     guardaDatos(e) {
         this.setState({ valor: e.target.value },
-            ()=> this.props.busqueda(this.state.valor)
-            );
+            () => this.props.busqueda(this.state.valor)
+        );
     };
 
     render() {
         return (
             <section className='buscador'>
                 <form onSubmit={(e) => this.noRecarga(e)}>
-                    <input className='placeholder' type='text' placeholder='!Encontrá lo que estes buscando!' onChange={(e) => this.guardaDatos(e)} value={this.state.valor} />
-                   
+                    <input className='input-formulario' type='text' placeholder='Search' onChange={(e) => this.guardaDatos(e)} value={this.state.valor} />
+
                 </form>
             </section>
         )
