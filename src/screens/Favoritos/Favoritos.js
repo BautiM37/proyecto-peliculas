@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import CadaPelicula from "../../components/CadaPelicula/CadaPelicula";
 import './Favoritos.css';
 import CadaSerie from "../../components/CadaSerie/CadaSerie";
-//import Filtrador from "../../components/Filtrador/Filtrador";
 
 class Favoritos extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
             peliculas: [],
             peliculasCargadas: [],
@@ -24,7 +23,7 @@ class Favoritos extends Component {
         let favoritosSeries = [];
 
         if (conseguirFavoritos !== null) {
-            let favsArray = JSON.parse(conseguirFavoritos);
+            let favsArray = JSON.parse(conseguirFavoritos); // transformar a array
             favsArray.map(unFavorito => fetch("https://api.themoviedb.org/3/movie/" + unFavorito + "?api_key=51c5421e7c7f38a93e388ad6d2405b1f&language=en-US")
                 .then(res => res.json())
                 .then(data => {
@@ -50,12 +49,6 @@ class Favoritos extends Component {
                     });
                 })
                 .catch())
-
-        }
-        if (conseguirFavoritosSeries !== null && conseguirFavoritos !== null) {
-            this.setState({
-                hayFavs: false
-            })
         }
     }
 
@@ -84,6 +77,7 @@ class Favoritos extends Component {
         }
 
     render() {
+        console.log(this.state.hayFavs)
         let pelisFavoritas = this.state.peliculas.map((unaPeli, idx) => <CadaPelicula key={unaPeli.title + idx} pelicula={unaPeli} />)
         let seriesFavoritas = this.state.series.map((unaSerie, idy) =>
             <CadaSerie key={unaSerie.name + idy} serie={unaSerie} />)
@@ -96,7 +90,7 @@ class Favoritos extends Component {
                         <input type='text' onChange={(event) => this.guardarCambios(event)} value={this.state.valor} className='input-filtro' placeholder="Filter results"/>
                     </form>
                 </section>
-                {/* <Filtrador peliculas={pelisFavoritas} series={seriesFavoritas}/> */}
+
                 <section className="contenedor-favoritos">
                     <h2 className="titulo-favs">Favourites</h2>
                     <section className="display-favoritos">

@@ -87,7 +87,7 @@ class DetalleSerie extends Component {
                     this.state.esFav === true ?
                         <i onClick={() => this.agregarYSacarFavs(this.state.serie.id)} className="fas fa-solid fa-star icono-estrella" id="fav-detalle"></i>
                         :
-                        <i onClick={() => this.agregarYSacarFavs(this.state.serie.id)} className="fas fa-solid fa-circle icono-estrella" id="fav-detalle"></i>
+                        <i onClick={() => this.agregarYSacarFavs(this.state.serie.id)} className="fas fa-regular fa-star icono-estrella-1" id="fav-detalle"></i>
                 }
             </section>
         )
